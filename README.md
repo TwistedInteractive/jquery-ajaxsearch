@@ -37,3 +37,27 @@ Response XML is expected in this format:
              </item>
         </collection>
     </results>
+
+Output HTML is generated like this:
+
+    <div id="searchresultbox">
+        <h3>Zoekresultaten:</h3>
+        <ul class="main>
+            <li class="projecten">
+                <h4>Projecten</h4>
+                <ul>
+                    <li onclick="window.location = '.../objecten/detail/15/project-x/';">
+                        <a href=".../objecten/detail/15/project-x/">Project X</a>
+                        <div class="excerpt">
+                            <p>Project X <strong>Lorem</strong> <strong>ipsum</strong>&nbsp;dolar sit amet Maecenas magna diam, gravida bibendum rhoncus sed,…</p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="close">×</a>
+        <div class="spinner">
+            <img src="...">
+        </div>
+    </div>
+

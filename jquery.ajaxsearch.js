@@ -26,16 +26,39 @@ Response XML is expected in this format:
 
     <results>
         <collection type="projecten" name="Projecten">
-            <item href="http://goevaers.twistedweb.nl/objecten/detail/9/strijp-s/">
-                <name>Strijp-S</name>
+            <item href=".../objecten/detail/15/project-x/">
+                <name>Project X</name>
                 <excerpt>
                      <![CDATA[
-                     <p>Strijp-S Lorem <strong>ipsum</strong> dolar sit amet Sed tortor eros, tristique eu semper ut, pharetra… dolor mauris lacinia felis, nec viverra sapien arcu vitae leo. HTML <strong>Ipsum</strong> Presents Pellentesque habitant morbi tristique senectus et netus et…</p>
+                         <p>Project X <strong>Lorem</strong> <strong>ipsum</strong>&nbsp;dolar sit amet Maecenas magna diam, gravida bibendum rhoncus sed,…</p>
                      ]]>
                  </excerpt>
              </item>
         </collection>
     </results>
+
+Output HTML is generated like this:
+
+    <div id="searchresultbox">
+        <h3>Zoekresultaten:</h3>
+        <ul class="main>
+            <li class="projecten">
+                <h4>Projecten</h4>
+                <ul>
+                    <li onclick="window.location = '.../objecten/detail/15/project-x/';">
+                        <a href=".../objecten/detail/15/project-x/">Project X</a>
+                        <div class="excerpt">
+                            <p>Project X <strong>Lorem</strong> <strong>ipsum</strong>&nbsp;dolar sit amet Maecenas magna diam, gravida bibendum rhoncus sed,…</p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <a href="#" class="close">×</a>
+        <div class="spinner">
+            <img src="...">
+        </div>
+    </div>
 
  */
 
