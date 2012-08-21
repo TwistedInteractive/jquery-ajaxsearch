@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Jquery-ajaxsearch : A Simple AJAX Search helper plugin for jQuery" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jquery-ajaxsearch</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kanduvisla/jquery-ajaxsearch">View on GitHub</a>
+
+          <h1 id="project_title">Jquery-ajaxsearch</h1>
+          <h2 id="project_tagline">A Simple AJAX Search helper plugin for jQuery</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kanduvisla/jquery-ajaxsearch/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kanduvisla/jquery-ajaxsearch/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>jquery-ajaxsearch</h1>
+
+<p>A Simple AJAX Search helper plugin for jQuery.</p>
+
+<p>HTML:</p>
+
+<pre><code>&lt;form method="post" action=""&gt;
+    &lt;input type="text" name="query" placeholder="object, onderwerp" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>JS:</p>
+
+<pre><code>$('#nav form').ajaxSearch({
+    url: '/search/',                    // The URL to load
+    param: 'query'                      // The name of the parameter to send to the AJAX-page
+    input_name: 'query',                // The input name of the query
+    method: 'get',                      // The method to call the AJAX page
+    id: 'searchresultbox',              // The ID of the search results box
+    label: 'Search Results:',           // The label to show
+    spinner: 'images/spinner.gif',      // The image to the AJAX spinner
+    allowsubmit: false                  // Allow the form to be submitted (by pressing 'enter' for example)
+});
+</code></pre>
+
+<p>Response XML is expected in this format:</p>
+
+<pre><code>&lt;results&gt;
+    &lt;collection type="projecten" name="Projecten"&gt;
+        &lt;item href="http://goevaers.twistedweb.nl/objecten/detail/9/strijp-s/"&gt;
+            &lt;name&gt;Strijp-S&lt;/name&gt;
+            &lt;excerpt&gt;
+                 &lt;![CDATA[
+                 &lt;p&gt;Strijp-S Lorem &lt;strong&gt;ipsum&lt;/strong&gt; dolar sit amet Sed tortor eros, tristique eu semper ut, pharetra… dolor mauris lacinia felis, nec viverra sapien arcu vitae leo. HTML &lt;strong&gt;Ipsum&lt;/strong&gt; Presents Pellentesque habitant morbi tristique senectus et netus et…&lt;/p&gt;
+                 ]]&gt;
+             &lt;/excerpt&gt;
+         &lt;/item&gt;
+    &lt;/collection&gt;
+&lt;/results&gt;
+</code></pre>
+
+<p>Output HTML is generated like this inside the form element:</p>
+
+<pre><code>&lt;div id="searchresultbox"&gt;
+    &lt;h3&gt;Zoekresultaten:&lt;/h3&gt;
+    &lt;ul class="main&gt;
+        &lt;li class="projecten"&gt;
+            &lt;h4&gt;Projecten&lt;/h4&gt;
+            &lt;ul&gt;
+                &lt;li onclick="window.location = '.../objecten/detail/15/project-x/';"&gt;
+                    &lt;a href=".../objecten/detail/15/project-x/"&gt;Project X&lt;/a&gt;
+                    &lt;div class="excerpt"&gt;
+                        &lt;p&gt;Project X &lt;strong&gt;Lorem&lt;/strong&gt; &lt;strong&gt;ipsum&lt;/strong&gt;&amp;nbsp;dolar sit amet Maecenas magna diam, gravida bibendum rhoncus sed,…&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="#" class="close"&gt;×&lt;/a&gt;
+    &lt;div class="spinner"&gt;
+        &lt;img src="..."&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Jquery-ajaxsearch maintained by <a href="https://github.com/kanduvisla">kanduvisla</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
