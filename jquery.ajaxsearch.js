@@ -37,7 +37,7 @@ Response XML is expected in this format:
         </collection>
     </results>
 
-Output HTML is generated like this:
+Output HTML is generated like this inside the form element:
 
     <div id="searchresultbox">
         <h3>Zoekresultaten:</h3>
