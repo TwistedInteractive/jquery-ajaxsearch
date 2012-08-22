@@ -27,11 +27,11 @@ Response XML is expected in this format:
 
     <results>
         <collection type="projecten" name="Projecten">
-            <item href="http://goevaers.twistedweb.nl/objecten/detail/9/strijp-s/">
-                <name>Strijp-S</name>
+            <item href=".../objecten/detail/15/project-x/">
+                <name>Project X</name>
                 <excerpt>
                      <![CDATA[
-                     <p>Strijp-S Lorem <strong>ipsum</strong> dolar sit amet Sed tortor eros, tristique eu semper ut, pharetra… dolor mauris lacinia felis, nec viverra sapien arcu vitae leo. HTML <strong>Ipsum</strong> Presents Pellentesque habitant morbi tristique senectus et netus et…</p>
+                         <p>Project X <strong>Lorem</strong> <strong>ipsum</strong>&nbsp;dolar sit amet Maecenas magna diam, gravida bibendum rhoncus sed,…</p>
                      ]]>
                  </excerpt>
              </item>
