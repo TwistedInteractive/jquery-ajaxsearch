@@ -117,6 +117,7 @@ Output HTML is generated like this inside the form element:
                     url: settings.url,
                     data: data,
                     success: function(data){
+                        $('ul.main', searchResultsBox).html('');
                         spinner.hide();
                         $('collection', data).each(function(){
                             var name = this.attributes['name'].value;
